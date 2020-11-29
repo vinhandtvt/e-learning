@@ -1,0 +1,47 @@
+@import '../../scss/helper/variables';
+@import '../../scss/helper/mixin';
+
+
+.header__form{
+    flex-grow: 1;
+    .form-control{
+        background-color: $color-gray-1;
+        border: none;
+        transition: none;
+        &:focus{
+            box-shadow: none;
+            background-color: $color-white-0;
+            border-top: 1px solid $color-gray-3;
+            border-bottom: 1px solid $color-gray-3;
+            border-left: 1px solid $color-gray-3;
+        }
+        &:focus + .input-group-append{
+            .input-group-text{
+                background-color: $color-white-0;
+                color: $color-red-0;
+                border-top: 1px solid $color-gray-3;
+                border-bottom: 1px solid $color-gray-3;
+                border-right: 1px solid $color-gray-3;
+            }
+            &:hover{
+                .input-group-text{
+                    color: $color-white-0;
+                    background-color: $color-red-0;
+                }
+            }
+        }
+    }
+    .input-group-append{
+        .input-group-text{
+            background-color: $color-gray-1;
+            color: $color-red-0;
+            border: none;
+        }
+        &:hover{
+            .input-group-text{
+                color: $color-white-0;
+                background-color: $color-red-0;
+            }
+        }
+    }
+}
